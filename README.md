@@ -114,9 +114,19 @@ Steps to deploy:
 
 ---
 
+
 ## Future Improvements
 
-Planned improvements include adding a login system for admin and users, integrating with a backend for persistent storage, adding email or SMS notifications, implementing automated testing, and creating a calendar view for easier browsing.
+While the current version of the Gym Class Booking System is fully functional, there are several enhancements that could be implemented in the future to improve usability and scalability:
+
+- **Backend Integration**: Connect the system to a backend (e.g., Node.js with MongoDB or Django with PostgreSQL) so bookings and waitlists are stored persistently across devices, not just in localStorage.
+- **User Accounts**: Allow users to create accounts, log in, and view their personal booking history.
+- **Email / SMS Notifications**: Send automatic reminders and confirmations when users book, cancel, or are promoted from the waitlist.
+- **Calendar View**: Provide a calendar interface for easier browsing of classes by week or month.
+- **Search and Filters**: Add filters for class type, instructor, or difficulty level to improve discoverability.
+- **Accessibility Enhancements**: Improve ARIA labels, keyboard navigation, and color contrast for a more inclusive experience.
+- **Automated Testing**: Implement unit and integration tests to ensure reliability and catch regressions early.
+- **Deployment Expansion**: Explore deployment on other platforms (e.g., Netlify, Vercel) for faster builds and CI/CD integration.
 
 ---
 ## Testing
