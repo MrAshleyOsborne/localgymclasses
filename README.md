@@ -87,7 +87,7 @@ The following wireframes were created to plan the layout and user flow of the Gy
 
 ![Instructors Wireframe](instructors.png)
 
-> Note: Wireframes were created using Figma and hand-drawn scans. They served as a guide for building the final responsive layout.
+
 
 ---
 
