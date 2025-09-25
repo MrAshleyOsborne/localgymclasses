@@ -105,7 +105,7 @@ The following table outlines the main features tested, steps taken, expected res
 1. Pushed my code to the `main` branch.  
 2. In the repository’s **Settings → Pages**, Iset **Branch** to `main` and **Folder** to `/ (root)`.  
 3. Save and waited for the site to build.  
-4. Visited `https://<username>.github.io/<repo-name>/`.
+4. Visited `https://MrAshleyOsborne.github.io/localgymclasses/`.
 
 ---
 
