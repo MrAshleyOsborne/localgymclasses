@@ -2,9 +2,9 @@
 // Sample Data
 // ===============================
 let classes = [
-  { name: "Yoga", instructor: "Alice", day: "Monday", time: "10:00", capacity: 5, bookings: [] },
-  { name: "Spin", instructor: "Bob", day: "Tuesday", time: "18:00", capacity: 8, bookings: [] },
-  { name: "Pilates", instructor: "Charlie", day: "Wednesday", time: "12:00", capacity: 6, bookings: [] }
+  { name: "Yoga", instructor: "Alice", day: "Monday", time: "10:00", capacity: 5, bookings: [], waitlist: [] },
+  { name: "Spin", instructor: "Bob", day: "Tuesday", time: "18:00", capacity: 8, bookings: [], waitlist: [] },
+  { name: "Pilates", instructor: "Charlie", day: "Wednesday", time: "12:00", capacity: 6, bookings: [], waitlist: [] }
 ];
 
 let instructors = [
@@ -40,7 +40,7 @@ function displayClasses(day) {
     const spotsLeft = c.capacity - c.bookings.length;
     const div = document.createElement("div");
     div.className = "class-card";
-    div.innerHTML = `<strong>${c.name}</strong> with ${c.instructor} at ${c.time} — Spots left: ${spotsLeft}`;
+    div.innerHTML = `<strong>${c.name}</strong> with ${c.instructor} at ${c.time} — Spots left: ${spotsLeft}, Waitlist: ${c.waitlist.length}`;
     classSchedule.appendChild(div);
   });
 }
@@ -106,16 +106,17 @@ bookingForm.addEventListener("submit", e => {
     selectedClass.bookings.push({ name, email, date });
     bookingMessage.textContent = `Booking confirmed for ${selectedClass.name} on ${date}.`;
   } else {
+    selectedClass.waitlist.push({ name, email, date });
     bookingMessage.textContent = `Sorry, ${selectedClass.name} is full. You have been added to the waitlist.`;
-    // Optional: implement waitlist array if needed
   }
 
   bookingForm.reset();
   bookingTime.innerHTML = ""; // reset dropdown
+  displayClasses(daySelect.value); // refresh schedule
 });
 
 // ===============================
-// Handle Cancellation
+// Handle Cancellation + Waitlist Promotion
 // ===============================
 cancelForm.addEventListener("submit", e => {
   e.preventDefault();
@@ -128,7 +129,15 @@ cancelForm.addEventListener("submit", e => {
     if (index !== -1) {
       c.bookings.splice(index, 1);
       cancelled = true;
-      cancelMessage.textContent = `Booking cancelled for ${c.name} on ${date}.`;
+
+      // Promote from waitlist if available
+      if (c.waitlist.length > 0) {
+        const promoted = c.waitlist.shift();
+        c.bookings.push(promoted);
+        cancelMessage.textContent = `Booking cancelled. ${promoted.name} has been promoted from the waitlist into ${c.name} on ${date}.`;
+      } else {
+        cancelMessage.textContent = `Booking cancelled for ${c.name} on ${date}.`;
+      }
     }
   });
 
@@ -137,6 +146,7 @@ cancelForm.addEventListener("submit", e => {
   }
 
   cancelForm.reset();
+  displayClasses(daySelect.value); // refresh schedule
 });
 
 // ===============================
