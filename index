@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Local Gym Class Booking System</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>Local Gym Classes</h1>
+    <nav>
+      <a href="#classes">Classes</a>
+      <a href="#book">Book</a>
+      <a href="#cancel">Cancel</a>
+      <a href="#admin">Admin</a>
+      <a href="#instructors">Meet Our Instructors</a>
+    </nav>
+  </header>
+
+  <main>
+    <section id="classes">
+      <h2>Browse Weekly Classes</h2>
+      <label for="day-select">Select a day:</label>
+      <select id="day-select">
+        <option>Monday</option><option>Tuesday</option><option>Wednesday</option>
+        <option>Thursday</option><option>Friday</option><option>Saturday</option><option>Sunday</option>
+      </select>
+      <div id="class-schedule"></div>
+    </section>
+
+    <section id="book">
+      <h2>Book a Class</h2>
+      <form id="booking-form">
+        <input type="text" id="user-name" placeholder="Your name" required />
+        <input type="email" id="user-email" placeholder="Your email" required />
+        <input type="date" id="booking-date" required />
+        <select id="booking-time" required></select>
+        <button type="submit">Confirm Booking</button>
+      </form>
+      <div id="booking-message" class="message"></div>
+    </section>
+
+    <section id="cancel">
+      <h2>Cancel a Booking</h2>
+      <form id="cancel-form">
+        <input type="email" id="cancel-email" placeholder="Your email" required />
+        <input type="date" id="cancel-date" required />
+        <button type="submit">Cancel Booking</button>
+      </form>
+      <div id="cancel-message" class="message"></div>
+    </section>
+
+    <section id="admin">
+      <h2>Admin: Add a New Class</h2>
+      <form id="admin-form">
+        <input type="text" id="class-name" placeholder="Class name" required />
+        <select id="instructor-select" required></select>
+        <input type="time" id="class-time" required />
+        <select id="class-day" required>
+          <option>Monday</option><option>Tuesday</option><option>Wednesday</option>
+          <option>Thursday</option><option>Friday</option><option>Saturday</option><option>Sunday</option>
+        </select>
+        <input type="number" id="capacity" placeholder="Capacity (spots)" min="1" required />
+        <button type="submit">Add Class</button>
+      </form>
+      <div id="admin-message" class="message"></div>
+    </section>
+
+    <section id="instructors">
+      <h2>Instructor Profiles</h2>
+      <div id="instructors-list"></div>
+    </section>
+  </main>
+
+  <footer>
+    <p>All data is stored locally in your browser.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
