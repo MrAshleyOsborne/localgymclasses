@@ -42,49 +42,52 @@ A responsive web application that allows users to browse, book, and cancel gym c
 The following wireframes were created to plan the layout and user flow of the Gym Class Booking System. They illustrate the structure of the homepage, booking form, cancellation form, and instructor profiles before development began.
 
 ### Homepage / Navigation
-- Header with site title and navigation links (Classes, Book, Cancel, Instructors).
-- Clear, consistent navigation across all pages.
+
+- Header with site title and navigation links (Classes, Booking, Cancel, Instructors).  
+- Clear, consistent navigation across all pages.  
 - Responsive layout for desktop and mobile.
 
-![Homepage Wireframe](assets/wireframes/homepage.png)
+![Homepage Wireframe](homepage.png)
 
 ---
 
 ### Classes Page
-- Dropdown to select a day of the week.
+
+- Dropdown to select a day of the week.  
 - Dynamic display of classes with name, instructor, time, capacity, spots left, and waitlist length.
 
-![Classes Wireframe](assets/wireframes/classes.png)
+![Classes Wireframe](classes.png)
 
 ---
 
 ### Booking Form
-- Input fields for name, email, and date.
-- Dropdown populated with available classes for the selected date.
+
+- Input fields for name, email, and date.  
+- Dropdown populated with available classes for the selected date.  
 - Confirmation message displayed after booking.
 
-![Booking Wireframe](assets/wireframes/booking.png)
+![Booking Wireframe](booking.png)
 
 ---
 
 ### Cancellation Form
-- Input fields for email and date.
-- Confirmation message displayed after successful cancellation.
+
+- Input fields for email and date.  
+- Confirmation message displayed after successful cancellation.  
 - Automatic waitlist promotion if applicable.
 
-![Cancellation Wireframe](assets/wireframes/cancellation.png)
+![Cancellation Wireframe](cancellation.png)
 
 ---
 
 ### Instructor Profiles
-- Grid of instructor cards with name, gender, years of experience, skills, classes taught, and bio.
+
+- Grid of instructor cards with name, gender, years of experience, skills, classes taught, and bio.  
 - Responsive design for mobile view.
 
-![Instructors Wireframe](assets/wireframes/instructors.png)
+![Instructors Wireframe](instructors.png)
 
----
-
-> **Note:** Wireframes were created using [your chosen tool, e.g., Figma, Balsamiq, or hand‑drawn scans]. They served as a guide for building the final responsive layout.
+> Note: Wireframes were created using Figma and hand-drawn scans. They served as a guide for building the final responsive layout.
 
 ---
 
@@ -102,60 +105,8 @@ The following wireframes were created to plan the layout and user flow of the Gy
 
 The following table outlines the main features tested, the steps taken, the expected results, and the actual results observed.
 
-| Feature                | Test Steps                                                                 | Expected Result                                                                 | Actual Result |
-|-------------------------|----------------------------------------------------------------------------|---------------------------------------------------------------------------------|---------------|
-| Browse Weekly Classes   | Select a day from the dropdown                                             | Classes for that day are displayed with name, time, instructor, capacity, spots | Works as expected |
-| Booking a Class         | Enter name, email, select date and time, submit form                      | Booking is confirmed, spots left decreases by one                               | Works as expected |
-| Booking Full Class      | Fill booking form for a class at full capacity                            | User is added to waitlist, message confirms waitlist status                     | Works as expected |
-| Cancellation            | Enter email and date of an existing booking, submit cancellation form     | Booking is removed, spots left increases by one                                 | Works as expected |
-| Waitlist Promotion      | Cancel a booking when waitlist has users                                  | First waitlisted user is promoted to booked, confirmation message shown         | Works as expected |
-| Instructor Profiles     | Scroll to instructor section                                              | Instructor cards display with name, gender, years, skills, classes, and bio     | Works as expected |
-| Responsiveness          | Open site on mobile view in Chrome DevTools                               | Layout adapts, navigation stacks, cards resize for smaller screens              | Works as expected |
-| Data Persistence        | Refresh page after making a booking                                       | Bookings remain saved via localStorage                                          | Works as expected |
-
-### Additional Notes
-- Tested on Chrome, Firefox, and Edge  
-- Tested on desktop and mobile screen sizes  
-- No critical bugs remain  
-
-### Bugs Fixed
-- Booking dropdown not populating after selecting a date — fixed by mapping date → weekday.  
-- Cancelling did not update spots left — resolved.  
-
-### Remaining Issues
-- Data is stored only in localStorage (cleared if browser cache is reset).  
-- No backend or database integration.  
-- No automated testing implemented.
-
----
-
-## Heroku Deployment Testing
-
-| Feature / Area          | Test Steps                                                                 | Expected Result                                                                 | Actual Result |
-|--------------------------|----------------------------------------------------------------------------|---------------------------------------------------------------------------------|---------------|
-| Deployment               | Open the Heroku app URL in browser                                         | Homepage loads with header, navigation, and sections visible                     | Works as expected |
-| Static Assets            | Inspect page source and network tab                                        | CSS and JS files load correctly without 404 errors                               | Works as expected |
-| Browse Classes           | Select a day from dropdown                                                 | Classes for that day display with correct details                                | Works as expected |
-| Booking Form             | Enter name, email, date, select time, submit                              | Booking confirmed, spots left decreases                                          | Works as expected |
-| Full Class Booking       | Fill all spots, attempt another booking                                    | User added to waitlist, confirmation message shown                               | Works as expected |
-| Cancellation             | Enter email and date of existing booking, submit                          | Booking removed, spots left increases                                            | Works as expected |
-| Waitlist Promotion       | Cancel a booking when waitlist has users                                   | First waitlisted user promoted to booked                                         | Works as expected |
-| Instructor Profiles      | Scroll to instructor section                                               | Instructor cards display with correct info                                       | Works as expected |
-| Responsiveness           | Open site in mobile view (DevTools)                                       | Layout adapts, navigation stacks, cards resize                                   | Works as expected |
-| Data Persistence         | Make a booking, refresh page                                               | Booking remains saved via localStorage                                           | Works as expected |
-
----
-
-## Deployment
-
-### GitHub Pages
-1. Go to **Settings → Pages**.  
-2. Set **Branch = main** and **Folder = /(root)**.  
-3. Save and wait for the site to build.  
-4. Access at: `https://<username>.github.io/<repo-name>/`
-
-### Heroku
-1. Create a new Heroku app.  
-2. Push your repo to Heroku:  
-   ```bash
-   git push heroku main
+| Feature                | Test Steps                                                                 | Expected Result                                                                 | Actual Result     |
+|------------------------|----------------------------------------------------------------------------|---------------------------------------------------------------------------------|-------------------|
+| Browse Weekly Classes  | Select a day from the dropdown                                             | Classes for that day are displayed with name, time, instructor, capacity, spots | Works as expected |
+| Booking a Class        | Enter name, email, select date and time, submit form                      | Booking is confirmed, spots left decreases by one                               | Works as expected |
+| Booking Full Class     | Fill booking form for
