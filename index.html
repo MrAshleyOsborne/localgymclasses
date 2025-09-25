@@ -13,12 +13,12 @@
       <a href="#classes">Classes</a>
       <a href="#book">Book</a>
       <a href="#cancel">Cancel</a>
-      <a href="#admin">Admin</a>
       <a href="#instructors">Meet Our Instructors</a>
     </nav>
   </header>
 
   <main>
+    <!-- Browse Classes -->
     <section id="classes">
       <h2>Browse Weekly Classes</h2>
       <label for="day-select">Select a day:</label>
@@ -29,6 +29,7 @@
       <div id="class-schedule"></div>
     </section>
 
+    <!-- Book a Class -->
     <section id="book">
       <h2>Book a Class</h2>
       <form id="booking-form">
@@ -41,6 +42,7 @@
       <div id="booking-message" class="message"></div>
     </section>
 
+    <!-- Cancel a Booking -->
     <section id="cancel">
       <h2>Cancel a Booking</h2>
       <form id="cancel-form">
@@ -51,22 +53,7 @@
       <div id="cancel-message" class="message"></div>
     </section>
 
-    <section id="admin">
-      <h2>Admin: Add a New Class</h2>
-      <form id="admin-form">
-        <input type="text" id="class-name" placeholder="Class name" required />
-        <select id="instructor-select" required></select>
-        <input type="time" id="class-time" required />
-        <select id="class-day" required>
-          <option>Monday</option><option>Tuesday</option><option>Wednesday</option>
-          <option>Thursday</option><option>Friday</option><option>Saturday</option><option>Sunday</option>
-        </select>
-        <input type="number" id="capacity" placeholder="Capacity (spots)" min="1" required />
-        <button type="submit">Add Class</button>
-      </form>
-      <div id="admin-message" class="message"></div>
-    </section>
-
+    <!-- Instructor Profiles -->
     <section id="instructors">
       <h2>Instructor Profiles</h2>
       <div id="instructors-list"></div>
