@@ -116,7 +116,7 @@ The following table outlines the main features tested, steps taken, expected res
 - **Email/SMS Notifications**: Send reminders and confirmations on booking, cancellation, and waitlist promotion  
 - **Calendar View**: Offer a weekly/monthly calendar interface for easier browsing  
 - **Search and Filters**: Enable filtering by instructor, class type, or difficulty  
-- **Accessibility Enhancements**: Improve ARIA labels, keyboard navigation, and color contrast  
+- **Accessibility Enhancements**: Improve ARIA labels, keyboard navigation, and colour contrast  
 - **Automated Testing**: Add unit and integration tests for reliability  
 - **CI/CD Pipeline**: Explore Netlify, Vercel, or GitHub Actions for continuous deployment
 
