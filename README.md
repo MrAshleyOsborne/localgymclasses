@@ -29,17 +29,17 @@ A responsive web application that allows users to browse, book, and cancel gym c
 
 ## User Experience (UX)
 
-- Clear navigation with links to Classes, Booking, Cancellation, and Instructors.  
-- Consistent layout and easy-to-follow forms.  
-- Responsive design adapts to smaller screens.  
-- Accessible forms with clear labels.  
-- Instructor profiles add trust and personality.
+- Clear navigation with links to Classes, Booking, Cancellation, and Instructors  
+- Consistent layout and easy-to-follow forms  
+- Responsive design adapts to smaller screens  
+- Accessible forms with clear labels  
+- Instructor profiles add trust and personality
 
 ---
 
 ## Wireframes
 
-The following wireframes illustrate the planned layout and user flow. PNG files are saved in the repository root and will render inline in GitHub.
+The following wireframes illustrate the planned layout and user flow. PNG files are saved in the repository root and will render inline on GitHub.
 
 ### Homepage / Navigation
 
@@ -102,22 +102,23 @@ The following table outlines the main features tested, steps taken, expected res
 
 ### GitHub Pages
 
-1. Pushed my code to the `main` branch.  
-2. In the repository’s **Settings → Pages**, Iset **Branch** to `main` and **Folder** to `/ (root)`.  
-3. Save and waited for the site to build.  
-4. Visited `https://MrAshleyOsborne.github.io/localgymclasses/`.
+1. Push your code to the `main` branch.  
+2. In your repository’s **Settings → Pages**, set **Branch** to `main` and **Folder** to `/ (root)`.  
+3. Save and wait for the site to build.  
+4. Visit: `https://MrAshleyOsborne.github.io/localgymclasses/`
 
 ---
 
 ## Future Improvements
 
-- **User Accounts**: Allow users to log in, manage profiles, and view booking history.  
-- **Email / SMS Notifications**: Send reminders and confirmations on booking, cancellation, and waitlist promotion.  
-- **Calendar View**: Offer a weekly/monthly calendar interface for easier browsing.  
-- **Search and Filters**: Enable filtering by instructor, class type, or difficulty.  
-- **Accessibility Enhancements**: Improve ARIA labels, keyboard navigation, and color contrast.  
-- **Automated Testing**: Add unit and integration tests for reliability.  
-- **CI/CD Pipeline**: Explore Netlify, Vercel, or GitHub Actions for continuous deployment.
+- **Backend Integration**: Connect to a database (e.g., MongoDB, PostgreSQL) for persistent storage  
+- **User Accounts**: Allow users to log in, manage profiles, and view booking history  
+- **Email/SMS Notifications**: Send reminders and confirmations on booking, cancellation, and waitlist promotion  
+- **Calendar View**: Offer a weekly/monthly calendar interface for easier browsing  
+- **Search and Filters**: Enable filtering by instructor, class type, or difficulty  
+- **Accessibility Enhancements**: Improve ARIA labels, keyboard navigation, and color contrast  
+- **Automated Testing**: Add unit and integration tests for reliability  
+- **CI/CD Pipeline**: Explore Netlify, Vercel, or GitHub Actions for continuous deployment
 
 ---
 
