@@ -39,7 +39,52 @@ A responsive web application that allows users to browse, book, and cancel gym c
 
 ## Wireframes
 
-*(Insert annotated wireframes here if available)*
+The following wireframes were created to plan the layout and user flow of the Gym Class Booking System. They illustrate the structure of the homepage, booking form, cancellation form, and instructor profiles before development began.
+
+### Homepage / Navigation
+- Header with site title and navigation links (Classes, Book, Cancel, Instructors).
+- Clear, consistent navigation across all pages.
+- Responsive layout for desktop and mobile.
+
+![Homepage Wireframe](assets/wireframes/homepage.png)
+
+---
+
+### Classes Page
+- Dropdown to select a day of the week.
+- Dynamic display of classes with name, instructor, time, capacity, spots left, and waitlist length.
+
+![Classes Wireframe](assets/wireframes/classes.png)
+
+---
+
+### Booking Form
+- Input fields for name, email, and date.
+- Dropdown populated with available classes for the selected date.
+- Confirmation message displayed after booking.
+
+![Booking Wireframe](assets/wireframes/booking.png)
+
+---
+
+### Cancellation Form
+- Input fields for email and date.
+- Confirmation message displayed after successful cancellation.
+- Automatic waitlist promotion if applicable.
+
+![Cancellation Wireframe](assets/wireframes/cancellation.png)
+
+---
+
+### Instructor Profiles
+- Grid of instructor cards with name, gender, years of experience, skills, classes taught, and bio.
+- Responsive design for mobile view.
+
+![Instructors Wireframe](assets/wireframes/instructors.png)
+
+---
+
+> **Note:** Wireframes were created using [your chosen tool, e.g., Figma, Balsamiq, or hand‑drawn scans]. They served as a guide for building the final responsive layout.
 
 ---
 
