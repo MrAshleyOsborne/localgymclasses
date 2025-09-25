@@ -1,6 +1,6 @@
 # Local Gym Class Booking System
 
-A responsive web application that allows users to browse, book, and cancel gym classes. The system also supports waitlists, automatically promoting users when spots become available. Built with HTML, CSS, and JavaScript, and deployed via GitHub Pages and Heroku.
+A responsive web application that allows users to browse, book, and cancel gym classes. The system also supports waitlists, automatically promoting users when spots become available. Built with HTML, CSS, and JavaScript, and deployed via GitHub Pages.
 
 ---
 
@@ -39,13 +39,9 @@ A responsive web application that allows users to browse, book, and cancel gym c
 
 ## Wireframes
 
-The following wireframes were created to plan the layout and user flow of the Gym Class Booking System. They illustrate the structure of the homepage, booking form, cancellation form, and instructor profiles before development began.
+The following wireframes illustrate the planned layout and user flow. PNG files are saved in the repository root and will render inline in GitHub.
 
 ### Homepage / Navigation
-
-- Header with site title and navigation links (Classes, Booking, Cancel, Instructors).  
-- Clear, consistent navigation across all pages.  
-- Responsive layout for desktop and mobile.
 
 ![Homepage Wireframe](homepage.png)
 
@@ -53,18 +49,11 @@ The following wireframes were created to plan the layout and user flow of the Gy
 
 ### Classes Page
 
-- Dropdown to select a day of the week.  
-- Dynamic display of classes with name, instructor, time, capacity, spots left, and waitlist length.
-
 ![Classes Wireframe](classes.png)
 
 ---
 
 ### Booking Form
-
-- Input fields for name, email, and date.  
-- Dropdown populated with available classes for the selected date.  
-- Confirmation message displayed after booking.
 
 ![Booking Wireframe](booking.png)
 
@@ -72,22 +61,13 @@ The following wireframes were created to plan the layout and user flow of the Gy
 
 ### Cancellation Form
 
-- Input fields for email and date.  
-- Confirmation message displayed after successful cancellation.  
-- Automatic waitlist promotion if applicable.
-
 ![Cancellation Wireframe](cancellation.png)
 
 ---
 
 ### Instructor Profiles
 
-- Grid of instructor cards with name, gender, years of experience, skills, classes taught, and bio.  
-- Responsive design for mobile view.
-
 ![Instructors Wireframe](instructors.png)
-
-
 
 ---
 
@@ -97,16 +77,52 @@ The following wireframes were created to plan the layout and user flow of the Gy
 - **CSS3** for styling and responsiveness  
 - **JavaScript (ES6)** for interactivity and logic  
 - **localStorage** for client-side persistence  
-- **Heroku** and **GitHub Pages** for deployment
+- **GitHub Pages** for deployment
 
 ---
 
 ## Testing
 
-The following table outlines the main features tested, the steps taken, the expected results, and the actual results observed.
+The following table outlines the main features tested, steps taken, expected results, and actual results.
 
-| Feature                | Test Steps                                                                 | Expected Result                                                                 | Actual Result     |
-|------------------------|----------------------------------------------------------------------------|---------------------------------------------------------------------------------|-------------------|
-| Browse Weekly Classes  | Select a day from the dropdown                                             | Classes for that day are displayed with name, time, instructor, capacity, spots | Works as expected |
-| Booking a Class        | Enter name, email, select date and time, submit form                      | Booking is confirmed, spots left decreases by one                               | Works as expected |
-| Booking Full Class     | Fill booking form for
+| Feature               | Test Steps                                                      | Expected Result                                                        | Actual Result     |
+|-----------------------|-----------------------------------------------------------------|------------------------------------------------------------------------|-------------------|
+| Browse Weekly Classes | Select a day from the dropdown                                  | Classes for that day display with name, time, instructor, capacity, spots | Works as expected |
+| Booking a Class       | Enter name, email, select date and time, submit form            | Booking is confirmed; spots left decreases by one                     | Works as expected |
+| Booking Full Class    | Fill a class to capacity, attempt another booking               | User is added to waitlist; message confirms waitlist status            | Works as expected |
+| Cancellation          | Enter email and date of an existing booking, submit cancellation | Booking is removed; spots left increases by one                       | Works as expected |
+| Waitlist Promotion    | Cancel a booking when waitlist has users                        | First waitlisted user is promoted to booked; confirmation shown       | Works as expected |
+| Instructor Profiles   | Scroll to instructor section                                     | Instructor cards display with correct details                         | Works as expected |
+| Responsiveness        | Open site on mobile view (DevTools)                             | Layout adapts; navigation stacks; cards resize                         | Works as expected |
+| Data Persistence      | Refresh page after making a booking                             | Bookings remain saved via localStorage                                 | Works as expected |
+
+---
+
+## Deployment
+
+### GitHub Pages
+
+1. Pushed my code to the `main` branch.  
+2. In the repository’s **Settings → Pages**, Iset **Branch** to `main` and **Folder** to `/ (root)`.  
+3. Save and waited for the site to build.  
+4. Visited `https://<username>.github.io/<repo-name>/`.
+
+---
+
+## Future Improvements
+
+- **User Accounts**: Allow users to log in, manage profiles, and view booking history.  
+- **Email / SMS Notifications**: Send reminders and confirmations on booking, cancellation, and waitlist promotion.  
+- **Calendar View**: Offer a weekly/monthly calendar interface for easier browsing.  
+- **Search and Filters**: Enable filtering by instructor, class type, or difficulty.  
+- **Accessibility Enhancements**: Improve ARIA labels, keyboard navigation, and color contrast.  
+- **Automated Testing**: Add unit and integration tests for reliability.  
+- **CI/CD Pipeline**: Explore Netlify, Vercel, or GitHub Actions for continuous deployment.
+
+---
+
+## Credits
+
+- Built by Ashley Osborne as part of Code Institute coursework.  
+- Inspired by real-world gym booking systems.  
+- Instructor data and class examples are fictional.  
