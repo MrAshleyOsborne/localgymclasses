@@ -1,7 +1,6 @@
 {
   "name": "local-gym-classes",
   "version": "1.0.0",
-  "description": "Local Gym Class Booking System",
   "main": "server.js",
   "scripts": {
     "start": "node server.js"
