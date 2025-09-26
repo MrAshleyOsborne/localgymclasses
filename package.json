@@ -1,7 +1,6 @@
 {
   "name": "local-gym-classes",
   "version": "1.0.0",
-  "description": "A simple gym class booking system built with HTML, CSS, and JavaScript, served via Node/Express for Heroku deployment.",
   "main": "server.js",
   "scripts": {
     "start": "node server.js"
