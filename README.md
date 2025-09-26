@@ -115,6 +115,55 @@ Add valid package.json for Heroku deployment
 - Specified Node engine version (>=16.x) for compatibility
 - Ensures Heroku installs npm and runs the app correctly
 
+- ## Heroku Deployment – Final Fixes and Buildpack Reset
+
+After resolving earlier issues with the `Procfile` and `package.json`, the app was still crashing on Heroku with the error:
+
+```
+/bin/bash: line 1: npm: command not found
+```
+
+This indicated that Heroku was not installing Node.js or npm, despite the project being correctly configured as a Node app.
+
+### Diagnosis
+- The `package.json` was valid and correctly placed in the root of the repository.
+- The `Procfile` was present and correctly formatted with `web: npm start`.
+- The crash persisted, pointing to Heroku using the wrong buildpack — likely leftover from earlier deployment attempts.
+
+### Final Fix
+To resolve this, the Heroku buildpack was manually reset to Node.js:
+
+#### Option A – Using Heroku CLI
+```bash
+heroku buildpacks:clear -a localgymclasses
+heroku buildpacks:set heroku/nodejs -a localgymclasses
+```
+
+#### Option B – Using Heroku Dashboard
+1. Go to the **Settings** tab of the Heroku app.
+2. Scroll to **Buildpacks**.
+3. Remove any existing buildpacks (e.g. Static or NGINX).
+4. Add the **Node.js buildpack**.
+5. Save changes.
+
+After resetting the buildpack, the app was redeployed via the **Deploy tab**, and the build logs confirmed:
+
+```
+-----> Node.js app detected
+-----> Installing dependencies
+-----> Installing express
+-----> Launching
+```
+
+The app successfully launched and is now live at:  
+[https://localgymclasses-28c319bcb276.herokuapp.com/](https://localgymclasses-28c319bcb276.herokuapp.com/)
+
+---
+
+### Summary
+This final step ensured Heroku correctly recognised the project as a Node.js app, installed the necessary dependencies, and ran the server without crashing. The deployment process now reflects a complete understanding of Heroku’s build system and troubleshooting workflow.
+
+
 ---
 
 ## Future Improvements
