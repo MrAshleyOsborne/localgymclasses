@@ -107,6 +107,14 @@ The following table outlines the main features tested, steps taken, expected res
 3. Save and wait for the site to build.  
 4. Visit: `https://MrAshleyOsborne.github.io/localgymclasses/`
 
+Add valid package.json for Heroku deployment
+
+- Created package.json in the project root so Heroku detects Node.js
+- Added start script: "node server.js"
+- Declared Express as a dependency
+- Specified Node engine version (>=16.x) for compatibility
+- Ensures Heroku installs npm and runs the app correctly
+
 ---
 
 ## Future Improvements
